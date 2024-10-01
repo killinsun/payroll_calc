@@ -118,7 +118,10 @@ function App() {
       ? baseCourseSalary + assignFee - course.discountAmount
       : baseCourseSalary - course.discountAmount;
 
-    return { sales: coursePrice - courseSalary, therapistSalary: courseSalary };
+    return {
+      sales: coursePrice - courseSalary + 1000,
+      therapistSalary: courseSalary - 1000,
+    };
   };
 
   const handleClickApply = (data: CalculatorForm) => {
